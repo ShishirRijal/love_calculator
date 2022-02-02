@@ -19,8 +19,15 @@ class _InputScreenState extends State<InputScreen> {
   final girlFocus = FocusNode();
   final girl = TextEditingController();
   void nextScreen() {
-    String boyName = boy.text;
-    String girlName = girl.text;
+    // extract the text from input field and then trim it so that
+    // if user only writes the white spaces, app will remove that..
+    String boyName = boy.text.trim();
+    String girlName = girl.text.trim();
+    // also see if user has put his/her full name, merge that to a single string
+
+    boyName = boyName.replaceAll(" ", "");
+    girlName = girlName.replaceAll(" ", "");
+
     if (boyName.isEmpty ||
         girlName.isEmpty ||
         boyName.length < 3 ||

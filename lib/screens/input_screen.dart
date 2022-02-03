@@ -23,8 +23,8 @@ class _InputScreenState extends State<InputScreen> {
     // if user only writes the white spaces, app will remove that..
     String boyName = boy.text.trim();
     String girlName = girl.text.trim();
-    // also see if user has put his/her full name, merge that to a single string
 
+    // also see if user has put his/her full name, merge that to a single string
     boyName = boyName.replaceAll(" ", "");
     girlName = girlName.replaceAll(" ", "");
 
@@ -38,7 +38,7 @@ class _InputScreenState extends State<InputScreen> {
     girl.clear();
     boyFocus.unfocus();
     girlFocus.unfocus();
-    Navigator.push(
+    Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => Loading(boyName, girlName),

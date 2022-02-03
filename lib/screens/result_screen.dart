@@ -76,7 +76,8 @@ class ResultScreen extends StatelessWidget {
                 style: kResultTextStyle),
             const SizedBox(height: 50.0),
             RoundButton('Re-Calculate', () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) {
                 return const InputScreen();
               }));
             })

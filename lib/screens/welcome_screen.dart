@@ -51,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
           RoundButton(
             "Let's Love",
             () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const InputScreen(),
